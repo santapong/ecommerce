@@ -11,3 +11,15 @@ spring:
       discovery:
         locator:
           enabled: true  # Enable discovery-based routing
+          
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce  # Replace 'ecommerce' with your database name
+    username: postgres                           # Default PostgreSQL username is 'postgres'
+    password: santapong                              # Your PostgreSQL password
+    driver-class-name: org.postgresql.Driver     # JDBC driver for PostgreSQL
+  jpa:
+    hibernate:
+      ddl-auto: update                           # Auto-create/update tables
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect  # PostgreSQL SQL dialect
